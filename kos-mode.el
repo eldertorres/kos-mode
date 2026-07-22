@@ -66,8 +66,7 @@
 
 (defmacro kos--opt (keywords)
   "Compile a regex matching any of KEYWORDS."
-  `(eval-when-compile
-     (regexp-opt ,keywords 'words)))
+  `(regexp-opt ,keywords 'words))
 
 (eval-and-compile
   (defconst kos-keywords
